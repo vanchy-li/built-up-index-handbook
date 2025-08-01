@@ -1,0 +1,18 @@
+project:
+  type: book
+
+book:
+  title: "Built-up Index Handbook"
+  author: "Vanchy Li"
+  date: "2025-08-01"
+  chapters:
+    - index.qmd
+    - 01-background.qmd
+    - 02-ndbi.qmd
+    - 03-ui-ibi-ndbai.qmd
+    - references.qmd
+
+format:
+  html:
+    theme: cosmo   # 默认主题，也可以换 flatly, minty 等
+    toc: true

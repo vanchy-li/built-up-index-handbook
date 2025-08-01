@@ -1,0 +1,12 @@
+# Welcome
+
+Welcome to the **Built-up Index Handbook**!
+
+This handbook introduces existing built-up indices, explains their principles, and provides code examples for urban studies using remote sensing.  
+
+👉 **What you’ll find here:**
+- 📖 Explanations of classic built-up indices like NDBI, UI, IBI  
+- 🛰️ Practical code examples in Google Earth Engine & Python  
+- ✅ Validation methods like TOC and Simple Random Sampling  
+
+Stay tuned – we’ll also introduce **VBI** after our paper is published! 🚀

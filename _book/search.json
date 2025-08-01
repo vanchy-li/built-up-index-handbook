@@ -1,0 +1,102 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Built-up Index Handbook",
+    "section": "",
+    "text": "1 Welcome\nWelcome to the Built-up Index Handbook!\nThis handbook introduces existing built-up indices, explains their principles, and provides code examples for urban studies using remote sensing.\n👉 What you’ll find here: - 📖 Explanations of classic built-up indices like NDBI, UI, IBI\n- 🛰️ Practical code examples in Google Earth Engine & Python\n- ✅ Validation methods like TOC and Simple Random Sampling\nStay tuned – we’ll also introduce VBI after our paper is published! 🚀",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "01-background.html",
+    "href": "01-background.html",
+    "title": "2  Why Built-up Indices Matter",
+    "section": "",
+    "text": "Urbanization is one of the biggest global changes of our time.\nTo study urban heat islands, flooding, and land-use change, researchers need to accurately map built-up areas.\nBuilt-up indices are formulas that combine different satellite bands to highlight urban surfaces – like NDVI for vegetation, but for cities.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Built-up Indices Matter</span>"
+    ]
+  },
+  {
+    "objectID": "02-ndbi.html",
+    "href": "02-ndbi.html",
+    "title": "3  NDBI – Normalized Difference Built-up Index",
+    "section": "",
+    "text": "3.1 📐 Formula\nThe Normalized Difference Built-up Index (NDBI), proposed by Zha et al. (2003), is the most widely used index for detecting built-up areas.\n\\[\nNDBI = \\frac{SWIR - NIR}{SWIR + NIR}\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>NDBI – Normalized Difference Built-up Index</span>"
+    ]
+  },
+  {
+    "objectID": "02-ndbi.html#formula",
+    "href": "02-ndbi.html#formula",
+    "title": "3  NDBI – Normalized Difference Built-up Index",
+    "section": "",
+    "text": "SWIR (Short-Wave Infrared) reflects strongly from urban materials (concrete, asphalt).\nNIR (Near-Infrared) reflects from vegetation.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>NDBI – Normalized Difference Built-up Index</span>"
+    ]
+  },
+  {
+    "objectID": "02-ndbi.html#code-example-google-earth-engine",
+    "href": "02-ndbi.html#code-example-google-earth-engine",
+    "title": "3  NDBI – Normalized Difference Built-up Index",
+    "section": "3.2 🛰️ Code Example (Google Earth Engine)",
+    "text": "3.2 🛰️ Code Example (Google Earth Engine)\n```python ndbi = image.normalizedDifference([‘B11’,‘B8’]).rename(‘NDBI’)",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>NDBI – Normalized Difference Built-up Index</span>"
+    ]
+  },
+  {
+    "objectID": "03-ui-ibi-ndbai.html",
+    "href": "03-ui-ibi-ndbai.html",
+    "title": "4  03-ui-ibi-ndbai.qmd",
+    "section": "",
+    "text": "4.1 UI (Urban Index)\n```markdown # UI, IBI, and NDBaI – The Evolution\nAfter NDBI, researchers created new indices to fix its limitations.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>**03-ui-ibi-ndbai.qmd**</span>"
+    ]
+  },
+  {
+    "objectID": "03-ui-ibi-ndbai.html#ui-urban-index",
+    "href": "03-ui-ibi-ndbai.html#ui-urban-index",
+    "title": "4  03-ui-ibi-ndbai.qmd",
+    "section": "",
+    "text": "Focuses on better separation of urban vs. non-urban areas.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>**03-ui-ibi-ndbai.qmd**</span>"
+    ]
+  },
+  {
+    "objectID": "03-ui-ibi-ndbai.html#ibi-index-based-built-up-index",
+    "href": "03-ui-ibi-ndbai.html#ibi-index-based-built-up-index",
+    "title": "4  03-ui-ibi-ndbai.qmd",
+    "section": "4.2 IBI (Index-based Built-up Index)",
+    "text": "4.2 IBI (Index-based Built-up Index)\n\nA “combo index” combining NDBI, SAVI, and MNDWI.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>**03-ui-ibi-ndbai.qmd**</span>"
+    ]
+  },
+  {
+    "objectID": "03-ui-ibi-ndbai.html#ndbai-new-built-up-index",
+    "href": "03-ui-ibi-ndbai.html#ndbai-new-built-up-index",
+    "title": "4  03-ui-ibi-ndbai.qmd",
+    "section": "4.3 NDBaI (New Built-up Index)",
+    "text": "4.3 NDBaI (New Built-up Index)\n\nImproved NDBI formula with better discrimination of bare soil.\n\n👉 These indices set the stage for future innovations – including VBI.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>**03-ui-ibi-ndbai.qmd**</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "5  References",
+    "section": "",
+    "text": "Zha, Y., Gao, J., & Ni, S. (2003). Use of normalized difference built-up index in automatically mapping urban areas from TM imagery. International Journal of Remote Sensing, 24(3), 583–594.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>References</span>"
+    ]
+  }
+]
