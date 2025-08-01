@@ -1,6 +1,59 @@
 # Why Built-up Indices Matter
 
-Urbanization is one of the biggest global changes of our time.  
+**Urbanization** is one of the biggest global changes of our time. More than half of the world's population now lives in urban areas, and this proportion continues to grow. Understanding the extent and distribution of built-up land is essential for tracking major global challenges, including:
+
+- 🌆 **Urban planning & infrastructure management** - Identifying where cities are expanding helps planners allocate resources for housing, transportation, and public services.
+![Bacelona Urban Planning](/pic/up1.jpg)
+&nbsp;
+- 🌡 **Environmental monitoring** - Built-up surfaces influence climate by contributing to the urban heat island (EHI) effect, altering runoff patterns, and changing local ecosystems.
+![Climate Change](/pic/ep1.jpg)
+&nbsp;
+- 🦠 **Public health & risk assessment** - Mapping built-up areas help identify potential hotspots for vector-borne diseases like dengue, chikungunya, and malaria, where urban density and infrastructure strongly influence mosquito habitats.
+![Public Health](/pic/ph1.jpg)
+&nbsp;
+- 🌊 **Disaster preparedness** - Accurate urban maps support flood risk assessment, emergency evacuation planning, and post-disaster damage evaluation.
+![Wildfire](/pic/dm1.jpg)
+&nbsp;
 To study urban heat islands, flooding, and land-use change, researchers need to accurately map **built-up areas**.
 
-**Built-up indices** are formulas that combine different satellite bands to highlight urban surfaces – like NDVI for vegetation, but for cities.
+**Built-up indices** are formulas that combine different satellite bands to highlight urban surfaces – like NDVI for vegetation, but for cities. It is a single metric that simplifies detection monitoring, and comparison, forming the foundation for deeper spatial analysis and detection-making.
+
+&nbsp;
+Traditional methods of mapping urban areas rely on manual interpretation or land cover classifications, which are time-consuming and inconsistent across regions. 
+
+&nbsp;
+**Built-up indices** provide a powerful alternative that: 
+- 1. They use simple spectral formulas based on satellite imagery to automatically highlight urban features such as concrete, asphalt, and rooftops.
+- 2. They can be applied quickly across large areas and different time periods, making them ideal for global change studies.
+
+&nbsp;
+
+However, unlike vegetation index (e.g., NDVI), there is no single built-up index that works equally well for all cities worldwide. Choosing the inappropriate built-up index for a given region can lead to poor mapping performance and misinterpretation.
+
+&nbsp;
+The reasons include:
+
+&nbsp;
+- 🌎 the heterogeneity of land cover types and construction materials Cities vary widely in roofing materials, street surfaces, and wall colors (e.g., red-tile roofs in Spain vs. gray concrete in Asia), which affects how they reflect light in satellite bands.
+![Roofs in Asia](/pic/asia1.jpg)
+
+&nbsp;
+- 🏜 Spectral confusion with similar surfaces - Bare soil, dry riverbeds, sand, or even some types of rock can produce reflectance values that look "urban" to certain indices.
+![Beach and Roofs](/pic/beach.jpg)
+
+&nbsp;
+- 🌤 Climate and atmospheric conditions - Humid tropical regions with persistent haze or temperate zones with seasonal snow can distort spectral signatures.
+![Snow roofs](/pic/snow.jpg)
+
+&nbsp;
+- 🛰 Sensor differences - Indices developed for one satelllite (e.g., Landsat) may not translate directly to others (e.g., Sentinel-2, MODIS) due to band placement and resolution differences.
+![Sensor image](/pic/diff.jpg)
+
+&nbsp;
+- 📏 Scale of analysis - What works for mapping a dense urban core may fail when applied to peri-urban or rural-urban transitional zones.
+![Urban and suburban](/pic/suburban.jpg)
+
+&nbsp;
+This little handbook will introduce existing built-up indices, demonstrate their use with Python examples, and present robust accuracy assessment tools to help you choose the best-fit built-up index for your study area.
+
+Stay tune...🚀
