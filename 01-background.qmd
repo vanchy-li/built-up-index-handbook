@@ -13,6 +13,7 @@
 &nbsp;
 - 🌊 **Disaster preparedness** - Accurate urban maps support flood risk assessment, emergency evacuation planning, and post-disaster damage evaluation.
 ![Wildfire](/pic/dm1.jpg)
+
 &nbsp;
 To study urban heat islands, flooding, and land-use change, researchers need to accurately map **built-up areas**.
 
@@ -26,7 +27,6 @@ Traditional methods of mapping urban areas rely on manual interpretation or land
 - 1. They use simple spectral formulas based on satellite imagery to automatically highlight urban features such as concrete, asphalt, and rooftops.
 - 2. They can be applied quickly across large areas and different time periods, making them ideal for global change studies.
 
-&nbsp;
 
 However, unlike vegetation index (e.g., NDVI), there is no single built-up index that works equally well for all cities worldwide. Choosing the inappropriate built-up index for a given region can lead to poor mapping performance and misinterpretation.
 
