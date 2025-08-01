@@ -12,20 +12,35 @@ permissions:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+
     steps:
+      # 1️⃣ Check out your repository
       - uses: actions/checkout@v3
 
+      # 2️⃣ Install Quarto CLI
       - uses: quarto-dev/quarto-actions/setup@v2
         with:
-          tinytex: true
+          tinytex: true   # installs LaTeX for PDF if needed
 
-      - name: Render book
+      # 3️⃣ Install Pandoc (sometimes needed for Quarto)
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      # 4️⃣ (Optional) Install Python deps if you use Python in .qmd
+      # - name: Set up Python
+      #   uses: actions/setup-python@v4
+      #   with:
+      #     python-version: '3.10'
+      # - name: Install packages
+      #   run: pip install -r requirements.txt
+
+      # 5️⃣ Render your book
+      - name: Render Quarto Project
         run: quarto render
 
+      # 6️⃣ Deploy the built site
       - name: Publish to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: _site
-
-
