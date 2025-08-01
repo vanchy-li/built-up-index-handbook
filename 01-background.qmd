@@ -1,6 +1,0 @@
-# Why Built-up Indices Matter
-
-Urbanization is one of the biggest global changes of our time.  
-To study urban heat islands, flooding, and land-use change, researchers need to accurately map **built-up areas**.
-
-**Built-up indices** are formulas that combine different satellite bands to highlight urban surfaces – like NDVI for vegetation, but for cities.
