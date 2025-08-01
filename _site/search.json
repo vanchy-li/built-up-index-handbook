@@ -1,0 +1,92 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Built-up Index Handbook",
+    "section": "",
+    "text": "1 Welcome\nWelcome to the Built-up Index Handbook!\nThis handbook introduces existing built-up indices, explains their principles, and provides code examples for urban studies using remote sensing.\n👉 What you’ll find here: - 📖 Explanations of classic built-up indices like NDBI, UI, IBI\n- 🛰️ Practical code examples in Google Earth Engine & Python\n- ✅ Validation methods like TOC and Simple Random Sampling\nStay tuned – we’ll also introduce VBI after our paper is published! 🚀",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "01-background.html",
+    "href": "01-background.html",
+    "title": "2  Why Built-up Indices Matter",
+    "section": "",
+    "text": "Urbanization is one of the biggest global changes of our time. More than half of the world’s population now lives in urban areas, and this proportion continues to grow. Understanding the extent and distribution of built-up land is essential for tracking major global challenges, including:\n\n🌆 Urban planning & infrastructure management - Identifying where cities are expanding helps planners allocate resources for housing, transportation, and public services.   \n🌡 Environmental monitoring - Built-up surfaces influence climate by contributing to the urban heat island (EHI) effect, altering runoff patterns, and changing local ecosystems.   \n🦠 Public health & risk assessment - Mapping built-up areas help identify potential hotspots for vector-borne diseases like dengue, chikungunya, and malaria, where urban density and infrastructure strongly influence mosquito habitats.   \n🌊 Disaster preparedness - Accurate urban maps support flood risk assessment, emergency evacuation planning, and post-disaster damage evaluation.    To study urban heat islands, flooding, and land-use change, researchers need to accurately map built-up areas.\n\nBuilt-up indices are formulas that combine different satellite bands to highlight urban surfaces – like NDVI for vegetation, but for cities. It is a single metric that simplifies detection monitoring, and comparison, forming the foundation for deeper spatial analysis and detection-making.\n  Traditional methods of mapping urban areas rely on manual interpretation or land cover classifications, which are time-consuming and inconsistent across regions.\n  Built-up indices provide a powerful alternative that: - 1. They use simple spectral formulas based on satellite imagery to automatically highlight urban features such as concrete, asphalt, and rooftops. - 2. They can be applied quickly across large areas and different time periods, making them ideal for global change studies.\n \nHowever, unlike vegetation index (e.g., NDVI), there is no single built-up index that works equally well for all cities worldwide. Choosing the inappropriate built-up index for a given region can lead to poor mapping performance and misinterpretation.\n  The reasons include:\n  - 🌎 the heterogeneity of land cover types and construction materials Cities vary widely in roofing materials, street surfaces, and wall colors (e.g., red-tile roofs in Spain vs. gray concrete in Asia), which affects how they reflect light in satellite bands. \n  - 🏜 Spectral confusion with similar surfaces - Bare soil, dry riverbeds, sand, or even some types of rock can produce reflectance values that look “urban” to certain indices. \n  - 🌤 Climate and atmospheric conditions - Humid tropical regions with persistent haze or temperate zones with seasonal snow can distort spectral signatures. \n  - 🛰 Sensor differences - Indices developed for one satelllite (e.g., Landsat) may not translate directly to others (e.g., Sentinel-2, MODIS) due to band placement and resolution differences. \n  - 📏 Scale of analysis - What works for mapping a dense urban core may fail when applied to peri-urban or rural-urban transitional zones. \n  This little handbook will introduce existing built-up indices, demonstrate their use with Python examples, and present robust accuracy assessment tools to help you choose the best-fit built-up index for your study area.\nStay tune…🚀",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Why Built-up Indices Matter</span>"
+    ]
+  },
+  {
+    "objectID": "02-ndbi.html",
+    "href": "02-ndbi.html",
+    "title": "3  NDBI – Normalized Difference Built-up Index",
+    "section": "",
+    "text": "3.1 📐 Formula\nThe Normalized Difference Built-up Index (NDBI), proposed by Zha et al. (2003), is the most widely used index for detecting built-up areas.\n\\[\nNDBI = \\frac{SWIR - NIR}{SWIR + NIR}\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>NDBI – Normalized Difference Built-up Index</span>"
+    ]
+  },
+  {
+    "objectID": "02-ndbi.html#formula",
+    "href": "02-ndbi.html#formula",
+    "title": "3  NDBI – Normalized Difference Built-up Index",
+    "section": "",
+    "text": "SWIR (Short-Wave Infrared) reflects strongly from urban materials (concrete, asphalt).\nNIR (Near-Infrared) reflects from vegetation.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>NDBI – Normalized Difference Built-up Index</span>"
+    ]
+  },
+  {
+    "objectID": "02-ndbi.html#code-example-google-earth-engine",
+    "href": "02-ndbi.html#code-example-google-earth-engine",
+    "title": "3  NDBI – Normalized Difference Built-up Index",
+    "section": "3.2 🛰️ Code Example (Google Earth Engine)",
+    "text": "3.2 🛰️ Code Example (Google Earth Engine)\n```python ndbi = image.normalizedDifference([‘B11’,‘B8’]).rename(‘NDBI’)\ncat &gt; references.qmd &lt;&lt; ‘EOF’ # References\n\nZha, Y., Gao, J., & Ni, S. (2003). Use of normalized difference built-up index in automatically mapping urban areas from TM imagery. International Journal of Remote Sensing, 24(3), 583–594.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>NDBI – Normalized Difference Built-up Index</span>"
+    ]
+  },
+  {
+    "objectID": "03-ui-ibi-ndbai.html",
+    "href": "03-ui-ibi-ndbai.html",
+    "title": "4  UI, IBI, and NDBaI – The Evolution",
+    "section": "",
+    "text": "4.1 UI (Urban Index)\nAfter NDBI, researchers created new indices to fix its limitations.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>UI, IBI, and NDBaI – The Evolution</span>"
+    ]
+  },
+  {
+    "objectID": "03-ui-ibi-ndbai.html#ui-urban-index",
+    "href": "03-ui-ibi-ndbai.html#ui-urban-index",
+    "title": "4  UI, IBI, and NDBaI – The Evolution",
+    "section": "",
+    "text": "Focuses on better separation of urban vs. non-urban areas.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>UI, IBI, and NDBaI – The Evolution</span>"
+    ]
+  },
+  {
+    "objectID": "03-ui-ibi-ndbai.html#ibi-index-based-built-up-index",
+    "href": "03-ui-ibi-ndbai.html#ibi-index-based-built-up-index",
+    "title": "4  UI, IBI, and NDBaI – The Evolution",
+    "section": "4.2 IBI (Index-based Built-up Index)",
+    "text": "4.2 IBI (Index-based Built-up Index)\n\nA “combo index” combining NDBI, SAVI, and MNDWI.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>UI, IBI, and NDBaI – The Evolution</span>"
+    ]
+  },
+  {
+    "objectID": "03-ui-ibi-ndbai.html#ndbai-new-built-up-index",
+    "href": "03-ui-ibi-ndbai.html#ndbai-new-built-up-index",
+    "title": "4  UI, IBI, and NDBaI – The Evolution",
+    "section": "4.3 NDBaI (New Built-up Index)",
+    "text": "4.3 NDBaI (New Built-up Index)\n\nImproved NDBI formula with better discrimination of bare soil.\n\n👉 These indices set the stage for future innovations – including VBI.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>UI, IBI, and NDBaI – The Evolution</span>"
+    ]
+  }
+]
