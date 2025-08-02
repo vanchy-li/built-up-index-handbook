@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Built-up Index Handbook",
     "section": "",
-    "text": "1 Welcome\nWelcome to the Built-up Index Handbook!\nThis handbook introduces existing built-up indices, explains their principles, and provides code examples for urban studies using remote sensing.\n👉 What you’ll find here: - 📖 Explanations of classic built-up indices like NDBI, UI, IBI\n- 🛰️ Practical code examples in Google Earth Engine & Python\n- ✅ Validation methods like TOC and Simple Random Sampling\nStay tuned – we’ll also introduce VBI after our paper is published! 🚀",
+    "text": "1 Welcome\nWelcome to the Built-up Index Handbook!\nThis handbook introduces existing built-up indices, explains their principles, and provides code examples for urban studies using remote sensing.\n👉 What you’ll find here:\n\n📖 Explanations of classic built-up indices like NDBI, UI, IBI\n\n🛰️ Practical code examples in Google Earth Engine & Python\n\n✅ Validation methods like TOC and Simple Random Sampling\n\nStay tuned – we’ll also introduce VBI after our paper is published! 🚀",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
     ]

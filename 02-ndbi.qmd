@@ -1,6 +1,6 @@
 # NDBI – Normalized Difference Built-up Index
 
-The **Normalized Difference Built-up Index (NDBI)**, proposed by Zha et al. (2003), is the most widely used index for detecting built-up areas.
+The **Normalized Difference Built-up Index (NDBI)**, proposed by [Zha et al. (2003)](https://www.tandfonline.com/doi/abs/10.1080/01431160304987), is the most widely used index for detecting built-up areas.
 
 ## 📐 Formula
 $$
