@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; NDBI – Normalized Difference Built-up Index – Built-up Index Handbook</title>
+<title>3&nbsp; Introduction to Existing Built-up Indices – Built-up Index Handbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-ndbi.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">NDBI – Normalized Difference Built-up Index</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-ndbi.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to Existing Built-up Indices</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -151,7 +151,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./02-ndbi.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">NDBI – Normalized Difference Built-up Index</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to Existing Built-up Indices</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -176,8 +176,26 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#formula" id="toc-formula" class="nav-link active" data-scroll-target="#formula"><span class="header-section-number">3.1</span> 📐 Formula</a></li>
-  <li><a href="#code-example-google-earth-engine" id="toc-code-example-google-earth-engine" class="nav-link" data-scroll-target="#code-example-google-earth-engine"><span class="header-section-number">3.2</span> 🛰️ Code Example (Google Earth Engine)</a></li>
+  <li><a href="#urban-index-ui-1996" id="toc-urban-index-ui-1996" class="nav-link active" data-scroll-target="#urban-index-ui-1996"><span class="header-section-number">3.1</span> Urban Index (UI) (1996)</a>
+  <ul class="collapse">
+  <li><a href="#formula" id="toc-formula" class="nav-link" data-scroll-target="#formula"><span class="header-section-number">3.1.1</span> 📐 Formula</a></li>
+  </ul></li>
+  <li><a href="#normalized-difference-built-up-index-ndbi-2003" id="toc-normalized-difference-built-up-index-ndbi-2003" class="nav-link" data-scroll-target="#normalized-difference-built-up-index-ndbi-2003"><span class="header-section-number">3.2</span> Normalized Difference Built-up Index (NDBI) (2003)</a>
+  <ul class="collapse">
+  <li><a href="#formula-1" id="toc-formula-1" class="nav-link" data-scroll-target="#formula-1"><span class="header-section-number">3.2.1</span> 📐 Formula</a></li>
+  </ul></li>
+  <li><a href="#bu-2008" id="toc-bu-2008" class="nav-link" data-scroll-target="#bu-2008"><span class="header-section-number">3.3</span> BU (2008)</a></li>
+  <li><a href="#ibi-2008" id="toc-ibi-2008" class="nav-link" data-scroll-target="#ibi-2008"><span class="header-section-number">3.4</span> IBI (2008)</a></li>
+  <li><a href="#nbi2010" id="toc-nbi2010" class="nav-link" data-scroll-target="#nbi2010"><span class="header-section-number">3.5</span> NBI(2010)</a></li>
+  <li><a href="#vibi-2012" id="toc-vibi-2012" class="nav-link" data-scroll-target="#vibi-2012"><span class="header-section-number">3.6</span> VIBI (2012)</a></li>
+  <li><a href="#brba-2012" id="toc-brba-2012" class="nav-link" data-scroll-target="#brba-2012"><span class="header-section-number">3.7</span> BRBA (2012)</a></li>
+  <li><a href="#nbai2012" id="toc-nbai2012" class="nav-link" data-scroll-target="#nbai2012"><span class="header-section-number">3.8</span> NBAI(2012)</a></li>
+  <li><a href="#bbi-2014" id="toc-bbi-2014" class="nav-link" data-scroll-target="#bbi-2014"><span class="header-section-number">3.9</span> BBI (2014)</a></li>
+  <li><a href="#baei-2015" id="toc-baei-2015" class="nav-link" data-scroll-target="#baei-2015"><span class="header-section-number">3.10</span> BAEI (2015)</a></li>
+  <li><a href="#multibi2019" id="toc-multibi2019" class="nav-link" data-scroll-target="#multibi2019"><span class="header-section-number">3.11</span> MultiBI(2019)</a></li>
+  <li><a href="#ibui-2020" id="toc-ibui-2020" class="nav-link" data-scroll-target="#ibui-2020"><span class="header-section-number">3.12</span> IBUI (2020)</a></li>
+  <li><a href="#mbi-the-fomula-exist-but-cannot-find-the-source" id="toc-mbi-the-fomula-exist-but-cannot-find-the-source" class="nav-link" data-scroll-target="#mbi-the-fomula-exist-but-cannot-find-the-source"><span class="header-section-number">3.13</span> MBI (the fomula exist but cannot find the source)</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">4</span> References</a></li>
   </ul>
 </nav>
     </div>
@@ -186,7 +204,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">NDBI – Normalized Difference Built-up Index</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to Existing Built-up Indices</span></h1>
 </div>
 
 
@@ -203,23 +221,123 @@ window.Quarto = {
 </header>
 
 
-<p>The <strong>Normalized Difference Built-up Index (NDBI)</strong>, proposed by <a href="https://www.tandfonline.com/doi/abs/10.1080/01431160304987">Zha et al.&nbsp;(2003)</a>, is the most widely used index for detecting built-up areas.</p>
-<section id="formula" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="formula"><span class="header-section-number">3.1</span> 📐 Formula</h2>
+<p>The concept of a <strong>built-up index</strong> emerged in the 199s, when urban remote sensing researchers began seeking <strong>simple spectral ratios or band combinations</strong> to distinguish impervious surfaces from vegetation, soil, and water.</p>
+<p>Below is a <strong>chronological overview</strong> of the key built-up indices (thermal-band-derived indices are not included yet) and their development.</p>
+<section id="urban-index-ui-1996" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="urban-index-ui-1996"><span class="header-section-number">3.1</span> Urban Index (UI) (1996)</h2>
+<p>The <strong>Urban Index (UI)</strong> was proposed by <a href="https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf">Kawamura et al., 1996</a>, which utilized Landsat TM band 7 (2.08µm - 2.35µm) and band 4 (0.76µm - 0.9µm). They study observed an inverse relationship between these two bands over urban areas, making their ratio useful for detecting built-up land.</p>
+<section id="formula" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="formula"><span class="header-section-number">3.1.1</span> 📐 Formula</h3>
 <p><span class="math display">\[
-NDBI = \frac{SWIR - NIR}{SWIR + NIR}
+UI = \frac{SWIR - NIR}{SWIR + NIR} = \frac{B7 - B4}{B7 + B4}
+\]</span></p>
+</section>
+</section>
+<section id="normalized-difference-built-up-index-ndbi-2003" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="normalized-difference-built-up-index-ndbi-2003"><span class="header-section-number">3.2</span> Normalized Difference Built-up Index (NDBI) (2003)</h2>
+<p>The <strong>Normalized Difference Built-up Index (NDBI)</strong>, proposed by <a href="https://www.tandfonline.com/doi/abs/10.1080/01431160304987">Zha et al.&nbsp;(2003)</a>, is the most widely used index for detecting built-up and barren areas.</p>
+<p>However, it is often <strong>misused as a standalone tool</strong>. The author clearly emphasized that <strong>NDBI should be combined with NDVI</strong> for effective mapping:</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In this study we proposed a new and simple method for the rapid and accurate mapping of urban areas. <strong>This method is based on the combinatinal use of NDBI and NDVI.</strong></p>
+</div>
+</div>
+<section id="formula-1" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="formula-1"><span class="header-section-number">3.2.1</span> 📐 Formula</h3>
+<p><span class="math display">\[
+NDBI = \frac{SWIR - NIR}{SWIR + NIR} = \frac{B5 - B4}{B5 + B4}
 \]</span></p>
 <ul>
 <li><strong>SWIR (Short-Wave Infrared)</strong> reflects strongly from urban materials (concrete, asphalt).</li>
 <li><strong>NIR (Near-Infrared)</strong> reflects from vegetation.</li>
 </ul>
-</section>
-<section id="code-example-google-earth-engine" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="code-example-google-earth-engine"><span class="header-section-number">3.2</span> 🛰️ Code Example (Google Earth Engine)</h2>
-<p>```python ndbi = image.normalizedDifference([‘B11’,‘B8’]).rename(‘NDBI’)</p>
-<p>cat &gt; references.qmd &lt;&lt; ‘EOF’ # References</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./pic/NDBI_SS1.png" class="img-fluid figure-img"></p>
+<figcaption>Spectral Signature</figcaption>
+</figure>
+</div>
+<p>To evaluate the effectiveness of <em>NDBI</em>, Zha et al.&nbsp;(2003) selected Nanjing, China, as their study area. They classified the landscape into six land-cover types:</p>
 <ul>
-<li>Zha, Y., Gao, J., &amp; Ni, S. (2003). Use of normalized difference built-up index in automatically mapping urban areas from TM imagery. <em>International Journal of Remote Sensing, 24</em>(3), 583–594.</li>
+<li>Barren land</li>
+<li>Built-up areas</li>
+<li>Farmland</li>
+<li>Woodland</li>
+<li>River</li>
+<li>Lake</li>
+</ul>
+<p>From the spectral signatures of these classes, they observed:</p>
+<ul>
+<li>The NDVI (difference between NIR and Red bands) is positive for woodland and farmland, but negative for all other classes.</li>
+<li>The NDBI (difference between SWIR1 [Band 5] and NIR) is positive for built-up and barren lands, but negative for all others.</li>
+</ul>
+<p>To map built-up land, they applied the following procedure: 1. Assign values: Positive NDBI or NDBI values were coded as 254, and negative values as 0. 2. Combine indices: They computed (NDBI - NDVI).</p>
+<ul>
+<li>Built-up and barren areas resulted in positive values.</li>
+<li>Farmland and woodland become 0 or -254.</li>
+<li>Water bodies were classified as 0.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./pic/NDBI_recoded.png" class="img-fluid figure-img"></p>
+<figcaption>Binary recoding</figcaption>
+</figure>
+</div>
+<ol start="3" type="1">
+<li>Reclassify:</li>
+</ol>
+<ul>
+<li>Positive values were labeled as built-up.</li>
+<li>0 or -254 values were labeled as non-built-up.</li>
+</ul>
+<p>This approach demonstrated that NDBI combined with NDVI could effectively isolated built-up areas from vegetation, water, and other land covers in the urban and barren landscapes of Nanjing.</p>
+</section>
+</section>
+<section id="bu-2008" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="bu-2008"><span class="header-section-number">3.3</span> BU (2008)</h2>
+</section>
+<section id="ibi-2008" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="ibi-2008"><span class="header-section-number">3.4</span> IBI (2008)</h2>
+</section>
+<section id="nbi2010" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="nbi2010"><span class="header-section-number">3.5</span> NBI(2010)</h2>
+</section>
+<section id="vibi-2012" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="vibi-2012"><span class="header-section-number">3.6</span> VIBI (2012)</h2>
+</section>
+<section id="brba-2012" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="brba-2012"><span class="header-section-number">3.7</span> BRBA (2012)</h2>
+</section>
+<section id="nbai2012" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="nbai2012"><span class="header-section-number">3.8</span> NBAI(2012)</h2>
+</section>
+<section id="bbi-2014" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="bbi-2014"><span class="header-section-number">3.9</span> BBI (2014)</h2>
+</section>
+<section id="baei-2015" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="baei-2015"><span class="header-section-number">3.10</span> BAEI (2015)</h2>
+</section>
+<section id="multibi2019" class="level2" data-number="3.11">
+<h2 data-number="3.11" class="anchored" data-anchor-id="multibi2019"><span class="header-section-number">3.11</span> MultiBI(2019)</h2>
+</section>
+<section id="ibui-2020" class="level2" data-number="3.12">
+<h2 data-number="3.12" class="anchored" data-anchor-id="ibui-2020"><span class="header-section-number">3.12</span> IBUI (2020)</h2>
+</section>
+<section id="mbi-the-fomula-exist-but-cannot-find-the-source" class="level2" data-number="3.13">
+<h2 data-number="3.13" class="anchored" data-anchor-id="mbi-the-fomula-exist-but-cannot-find-the-source"><span class="header-section-number">3.13</span> MBI (the fomula exist but cannot find the source)</h2>
+</section>
+<section id="references" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> References</h1>
+<ul>
+<li>Zha, Y., Gao, J., &amp; Ni, S. (2003). Use of normalized difference built-up index in automatically mapping urban areas from TM imagery. International journal of remote sensing, 24(3), 583-594.</li>
 </ul>
 
 

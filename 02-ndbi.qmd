@@ -1,20 +1,79 @@
-# NDBI – Normalized Difference Built-up Index
+# Introduction to Existing Built-up Indices
 
-The **Normalized Difference Built-up Index (NDBI)**, proposed by [Zha et al. (2003)](https://www.tandfonline.com/doi/abs/10.1080/01431160304987), is the most widely used index for detecting built-up areas.
+The concept of a **built-up index** emerged in the 199s, when urban remote sensing researchers began seeking **simple spectral ratios or band combinations** to distinguish impervious surfaces from vegetation, soil, and water.
 
-## 📐 Formula
+Below is a **chronological overview** of the key built-up indices (thermal-band-derived indices are not included yet) and their development.
+
+## Urban Index (UI) (1996)
+The **Urban Index (UI)** was proposed by [Kawamura et al., 1996](https://www.isprs.org/proceedings/XXXI/congress/part7/321_XXXI-part7.pdf), which utilized Landsat TM band 7 (2.08µm - 2.35µm) and band 4 (0.76µm - 0.9µm). They study observed an inverse relationship between these two bands over urban areas, making their ratio useful for detecting built-up land.
+
+### 📐 Formula
 $$
-NDBI = \frac{SWIR - NIR}{SWIR + NIR}
+UI = \frac{SWIR - NIR}{SWIR + NIR} = \frac{B7 - B4}{B7 + B4}
+$$ 
+
+## Normalized Difference Built-up Index (NDBI) (2003)
+The **Normalized Difference Built-up Index (NDBI)**, proposed by [Zha et al. (2003)](https://www.tandfonline.com/doi/abs/10.1080/01431160304987), is the most widely used index for detecting built-up and barren areas.
+
+However, it is often **misused as a standalone tool**. The author clearly emphasized that **NDBI should be combined with NDVI** for effective mapping:
+
+::: {.callout-important}
+In this study we proposed a new and simple method for the rapid and accurate mapping of urban areas. **This method is based on the combinatinal use of NDBI and NDVI.**
+:::
+
+### 📐 Formula
+$$
+NDBI = \frac{SWIR - NIR}{SWIR + NIR} = \frac{B5 - B4}{B5 + B4}
 $$
 
 - **SWIR (Short-Wave Infrared)** reflects strongly from urban materials (concrete, asphalt).
 - **NIR (Near-Infrared)** reflects from vegetation.
 
-## 🛰️ Code Example (Google Earth Engine)
-```python
-ndbi = image.normalizedDifference(['B11','B8']).rename('NDBI')
+![Spectral Signature](/pic/NDBI_SS1.png)
 
-cat > references.qmd << 'EOF'
+To evaluate the effectiveness of *NDBI*, Zha et al. (2003) selected Nanjing, China, as their study area. They classified the landscape into six land-cover types:
+
+- Barren land
+- Built-up areas
+- Farmland
+- Woodland
+- River
+- Lake
+
+From the spectral signatures of these classes, they observed:
+
+- The NDVI (difference between NIR and Red bands) is positive for woodland and farmland, but negative for all other classes.
+- The NDBI (difference between SWIR1 [Band 5] and NIR) is positive for built-up and barren lands, but negative for all others.
+
+To map built-up land, they applied the following procedure:
+1. Assign values: Positive NDBI or NDBI values were coded as 254, and negative values as 0.
+2. Combine indices: They computed (NDBI - NDVI).
+
+- Built-up and barren areas resulted in positive values.
+- Farmland and woodland become 0 or -254.
+- Water bodies were classified as 0.
+
+![Binary recoding](/pic/NDBI_recoded.png)
+
+3. Reclassify:
+
+- Positive values were labeled as built-up.
+- 0 or -254 values were labeled as non-built-up.
+
+This approach demonstrated that NDBI combined with NDVI could effectively isolated built-up areas from vegetation, water, and other land covers in the urban and barren landscapes of Nanjing.
+
+## BU (2008)
+## IBI (2008)
+## NBI(2010)
+## VIBI (2012)
+## BRBA (2012)
+## NBAI(2012)
+## BBI (2014)
+## BAEI (2015)
+## MultiBI(2019)
+## IBUI (2020)
+## MBI (the fomula exist but cannot find the source)
+
 # References
 
-- Zha, Y., Gao, J., & Ni, S. (2003). Use of normalized difference built-up index in automatically mapping urban areas from TM imagery. *International Journal of Remote Sensing, 24*(3), 583–594.
+- Zha, Y., Gao, J., & Ni, S. (2003). Use of normalized difference built-up index in automatically mapping urban areas from TM imagery. International journal of remote sensing, 24(3), 583-594.
