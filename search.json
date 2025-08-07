@@ -140,46 +140,6 @@
     ]
   },
   {
-    "objectID": "03-ui-ibi-ndbai.html",
-    "href": "03-ui-ibi-ndbai.html",
-    "title": "4  UI, IBI, and NDBaI – The Evolution",
-    "section": "",
-    "text": "4.1 UI (Urban Index)\nAfter NDBI, researchers created new indices to fix its limitations.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>UI, IBI, and NDBaI – The Evolution</span>"
-    ]
-  },
-  {
-    "objectID": "03-ui-ibi-ndbai.html#ui-urban-index",
-    "href": "03-ui-ibi-ndbai.html#ui-urban-index",
-    "title": "4  UI, IBI, and NDBaI – The Evolution",
-    "section": "",
-    "text": "Focuses on better separation of urban vs. non-urban areas.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>UI, IBI, and NDBaI – The Evolution</span>"
-    ]
-  },
-  {
-    "objectID": "03-ui-ibi-ndbai.html#ibi-index-based-built-up-index",
-    "href": "03-ui-ibi-ndbai.html#ibi-index-based-built-up-index",
-    "title": "4  UI, IBI, and NDBaI – The Evolution",
-    "section": "4.2 IBI (Index-based Built-up Index)",
-    "text": "4.2 IBI (Index-based Built-up Index)\n\nA “combo index” combining NDBI, SAVI, and MNDWI.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>UI, IBI, and NDBaI – The Evolution</span>"
-    ]
-  },
-  {
-    "objectID": "03-ui-ibi-ndbai.html#ndbai-new-built-up-index",
-    "href": "03-ui-ibi-ndbai.html#ndbai-new-built-up-index",
-    "title": "4  UI, IBI, and NDBaI – The Evolution",
-    "section": "4.3 NDBaI (New Built-up Index)",
-    "text": "4.3 NDBaI (New Built-up Index)\n\nImproved NDBI formula with better discrimination of bare soil.\n\n👉 These indices set the stage for future innovations – including VBI.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>UI, IBI, and NDBaI – The Evolution</span>"
-    ]
-  },
-  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",
