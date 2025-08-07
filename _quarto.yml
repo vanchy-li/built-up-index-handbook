@@ -9,7 +9,7 @@ book:
   chapters:
     - index.qmd
     - 01-background.qmd
-    - 02-ndbi.qmd
+    - 02-bi_collection.qmd
     - 03-ui-ibi-ndbai.qmd
     - references.qmd
 
