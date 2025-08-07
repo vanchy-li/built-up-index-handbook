@@ -20,141 +20,121 @@
     ]
   },
   {
-    "objectID": "02-ndbi.html",
-    "href": "02-ndbi.html",
+    "objectID": "02-bi_collection.html",
+    "href": "02-bi_collection.html",
     "title": "3  Introduction to Existing Built-up Indices",
     "section": "",
-    "text": "3.1 Urban Index (UI) (1996)\nThe concept of a built-up index emerged in the 199s, when urban remote sensing researchers began seeking simple spectral ratios or band combinations to distinguish impervious surfaces from vegetation, soil, and water.\nBelow is a chronological overview of the key built-up indices (thermal-band-derived indices are not included yet) and their development.\nThe Urban Index (UI) was proposed by Kawamura et al., 1996, which utilized Landsat TM band 7 (2.08µm - 2.35µm) and band 4 (0.76µm - 0.9µm). They study observed an inverse relationship between these two bands over urban areas, making their ratio useful for detecting built-up land.",
+    "text": "3.1 UI (1996)\nThe concept of a built-up index emerged in the 199s, when urban remote sensing researchers began seeking simple spectral ratios or band combinations to distinguish impervious surfaces from vegetation, soil, and water.\nBelow is a chronological overview of the key built-up indices (thermal-band-derived indices are not included yet) and their development.\nThe Urban Index (UI) was proposed by Kawamura et al., 1996, which utilized Landsat TM band 7 (2.08µm - 2.35µm) and band 4 (0.76µm - 0.9µm). They study observed an inverse relationship between these two bands over urban areas, making their ratio useful for detecting built-up land.\n📐 Formula – UI \\[\nUI = \\frac{SWIR - NIR}{SWIR + NIR} = \\frac{B7 - B4}{B7 + B4}\n\\]",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to Existing Built-up Indices</span>"
     ]
   },
   {
-    "objectID": "02-ndbi.html#urban-index-ui-1996",
-    "href": "02-ndbi.html#urban-index-ui-1996",
+    "objectID": "02-bi_collection.html#ndbi",
+    "href": "02-bi_collection.html#ndbi",
     "title": "3  Introduction to Existing Built-up Indices",
-    "section": "",
-    "text": "3.1.1 📐 Formula\n\\[\nUI = \\frac{SWIR - NIR}{SWIR + NIR} = \\frac{B7 - B4}{B7 + B4}\n\\]",
+    "section": "3.2 NDBI (2003)",
+    "text": "3.2 NDBI (2003)\nThe Normalized Difference Built-up Index (NDBI), proposed by Zha et al. (2003), is the most widely used index for detecting built-up and barren areas.\nHowever, it is often misused as a standalone tool. The author clearly emphasized that NDBI should be combined with NDVI for effective mapping:\n\n\n\n\n\n\n📖 Citation\n\n\n\nIn this study we proposed a new and simple method for the rapid and accurate mapping of urban areas. This method is based on the combinatinal use of NDBI and NDVI.\n\n\n📐 Formula – NDBI \\[\nNDBI = \\frac{SWIR - NIR}{SWIR + NIR} = \\frac{B5 - B4}{B5 + B4}\n\\]\n\nSWIR (Short-Wave Infrared) reflects strongly from urban materials (concrete, asphalt).\nNIR (Near-Infrared) reflects from vegetation.\n\n\n\n\nSpectral Signature from Zha et al. (2003)\n\n\nTo evaluate the effectiveness of NDBI, Zha et al. (2003) selected Nanjing, China, as their study area. They classified the landscape into six land-cover types:\n\nBarren land\nBuilt-up areas\nFarmland\nWoodland\nRiver\nLake\n\nFrom the spectral signatures of these classes, they observed:\n\nThe NDVI (difference between NIR and Red bands) is positive for woodland and farmland, but negative for all other classes.\nThe NDBI (difference between SWIR1 [Band 5] and NIR) is positive for built-up and barren lands, but negative for all others.\n\nTo map built-up land, they applied the following procedure: 1. Assign values: Positive NDBI or NDBI values were coded as 254, and negative values as 0. 2. Combine indices: They computed (NDBI - NDVI).\n\nBuilt-up and barren areas resulted in positive values.\nFarmland and woodland become 0 or -254.\nWater bodies were classified as 0.\n\n\n\n\nBinary Recording from Zha et al., (2003)\n\n\n\nReclassify:\n\n\nPositive values were labeled as built-up.\n0 or -254 values were labeled as non-built-up.\n\nThis approach demonstrated that NDBI combined with NDVI could effectively isolated built-up areas from vegetation, water, and other land covers in the urban and barren landscapes of Nanjing.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to Existing Built-up Indices</span>"
     ]
   },
   {
-    "objectID": "02-ndbi.html#normalized-difference-built-up-index-ndbi-2003",
-    "href": "02-ndbi.html#normalized-difference-built-up-index-ndbi-2003",
+    "objectID": "02-bi_collection.html#ibi-2008",
+    "href": "02-bi_collection.html#ibi-2008",
     "title": "3  Introduction to Existing Built-up Indices",
-    "section": "3.2 Normalized Difference Built-up Index (NDBI) (2003)",
-    "text": "3.2 Normalized Difference Built-up Index (NDBI) (2003)\nThe Normalized Difference Built-up Index (NDBI), proposed by Zha et al. (2003), is the most widely used index for detecting built-up and barren areas.\nHowever, it is often misused as a standalone tool. The author clearly emphasized that NDBI should be combined with NDVI for effective mapping:\n\n\n\n\n\n\nImportant\n\n\n\nIn this study we proposed a new and simple method for the rapid and accurate mapping of urban areas. This method is based on the combinatinal use of NDBI and NDVI.\n\n\n\n3.2.1 📐 Formula\n\\[\nNDBI = \\frac{SWIR - NIR}{SWIR + NIR} = \\frac{B5 - B4}{B5 + B4}\n\\]\n\nSWIR (Short-Wave Infrared) reflects strongly from urban materials (concrete, asphalt).\nNIR (Near-Infrared) reflects from vegetation.\n\n\n\n\nSpectral Signature\n\n\nTo evaluate the effectiveness of NDBI, Zha et al. (2003) selected Nanjing, China, as their study area. They classified the landscape into six land-cover types:\n\nBarren land\nBuilt-up areas\nFarmland\nWoodland\nRiver\nLake\n\nFrom the spectral signatures of these classes, they observed:\n\nThe NDVI (difference between NIR and Red bands) is positive for woodland and farmland, but negative for all other classes.\nThe NDBI (difference between SWIR1 [Band 5] and NIR) is positive for built-up and barren lands, but negative for all others.\n\nTo map built-up land, they applied the following procedure: 1. Assign values: Positive NDBI or NDBI values were coded as 254, and negative values as 0. 2. Combine indices: They computed (NDBI - NDVI).\n\nBuilt-up and barren areas resulted in positive values.\nFarmland and woodland become 0 or -254.\nWater bodies were classified as 0.\n\n\n\n\nBinary recoding\n\n\n\nReclassify:\n\n\nPositive values were labeled as built-up.\n0 or -254 values were labeled as non-built-up.\n\nThis approach demonstrated that NDBI combined with NDVI could effectively isolated built-up areas from vegetation, water, and other land covers in the urban and barren landscapes of Nanjing.",
+    "section": "3.3 IBI (2008)",
+    "text": "3.3 IBI (2008)\nThe Index-Based Built-up Index (IBI) was proposed by Xu, 2008 for the rapid extraction of built-up land features in satellite imagery. It was tested using a Landsat ETM+ image of Fuzhou City in China.\nIBI is notable for being the first built-up index to use thematic index-derived bands instead of using original Landsat TM bands. It combines three thematic indices representing vegetation, water, and built-up land:\n\n🌿 Soil Adjusted Vegetation Index (SAVI) \\[\nSAVI = \\frac{(NIR - Red)(1 + L)}{(NIR + Red + L)}\n\\]\n\n\n\n\n\n\n\nTip\n\n\n\nSAVI is suggested to use with plant cover as low as 15%, while NDVI (L = 0) can work for areas with more than 30% plant coverage. The author applied NDVI for his case study in Fuzhou.\n\n\n\n🌊 Modified Normalized Difference Water Index (MNDWI)\n\n\\[\nMNDWI = \\frac{Green - SWIR}{Green + SWIR} = \\frac{B2 - B5}{B2 + B5}\n\\]\n\n🏙️ Normalized Difference Built-up Index (NDBI)\n\n\\[\nNDBI = \\frac{SWIR - NIR}{SWIR + NIR} = \\frac{B5 - B4}{B5 + B4}\n\\]\nThe IBI was tested for three land cover types: Vegetation, Built-up land, and Water. IBI showed its ability to distinguish built-up area from vegetation and water bodies. However, the author didn’t address if IBI can separate built-up from bare soil. Based on the spectral responses and interpretation of results, it implied that IBI cannot reliably separate built-up from bare lands.\n\n\n\nIBI Results from Xu (2008)\n\n\n\n\n\n\n\n\n📖 Citation\n\n\n\nThe resultant image is a binary image (IBI = 0.013) (Figure 2(b)), only showing the extracted built-up land information (in white). Non-urban areas were further masked out using a vector polygon defining the urban outline and only the built-up lands inside the urban region were retained as urban built-up lands (Figure 2(c))\n\n\n📐 Formula – IBI \\[\nIBI = \\frac{NDBI - (SAVI + MNDWI) / 2}{NDBI + (SAVI + MNDWI) / 2}\n\\]",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to Existing Built-up Indices</span>"
     ]
   },
   {
-    "objectID": "02-ndbi.html#bu-2008",
-    "href": "02-ndbi.html#bu-2008",
+    "objectID": "02-bi_collection.html#bu-2010",
+    "href": "02-bi_collection.html#bu-2010",
     "title": "3  Introduction to Existing Built-up Indices",
-    "section": "3.3 BU (2008)",
-    "text": "3.3 BU (2008)",
+    "section": "3.4 BU (2010)",
+    "text": "3.4 BU (2010)\nThe Built-up (BU) introduced by He et al., 2010 is a modified version of the original NDBI. As previously mentioned, the original method proposed by Zha et al. (2003) extracted built-up areas using a binary classification of (NDBI - NDVI).\nIn contrast, this paper directly used the continuous values of (NDBI - NDVI) and proposed a semi-automatic segmentation approach to determine the optimal threshold to separate built-up from non-built-up area.\nRather than introducing that specific segmentation method here, this handbook will instead demonstrate the use of the Total Operating Characteristic (TOC) (Pontius & Si, 2014), which provides a more intuitive and efficient way to identify optimal threshold values.\n📐 Formula – BU \\[\nBU = NDBI - NDVI\n\\]",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to Existing Built-up Indices</span>"
     ]
   },
   {
-    "objectID": "02-ndbi.html#ibi-2008",
-    "href": "02-ndbi.html#ibi-2008",
-    "title": "3  Introduction to Existing Built-up Indices",
-    "section": "3.4 IBI (2008)",
-    "text": "3.4 IBI (2008)",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to Existing Built-up Indices</span>"
-    ]
-  },
-  {
-    "objectID": "02-ndbi.html#nbi2010",
-    "href": "02-ndbi.html#nbi2010",
+    "objectID": "02-bi_collection.html#nbi2010",
+    "href": "02-bi_collection.html#nbi2010",
     "title": "3  Introduction to Existing Built-up Indices",
     "section": "3.5 NBI(2010)",
-    "text": "3.5 NBI(2010)",
+    "text": "3.5 NBI(2010)\nThe New Built-up Index (NBI) was proposed by Chen et al., 2010. It uses Red, NIR, and SWIR bands from Landsat TM imagery (2007) to map built-up area in Changzhou City, Jiangsu Province, China.\n📐 Formula – NBI \\[\nNBI = \\frac{Red * SWIR}{NIR} = \\frac{B3 * B5}{B4}\n\\]",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to Existing Built-up Indices</span>"
     ]
   },
   {
-    "objectID": "02-ndbi.html#vibi-2012",
-    "href": "02-ndbi.html#vibi-2012",
+    "objectID": "02-bi_collection.html#vibi-2012",
+    "href": "02-bi_collection.html#vibi-2012",
     "title": "3  Introduction to Existing Built-up Indices",
     "section": "3.6 VIBI (2012)",
-    "text": "3.6 VIBI (2012)",
+    "text": "3.6 VIBI (2012)\nThe Vegetation Index Built-up Index (VIBI), proposed by Stathakis et al., 2012, is based on the combination of NDVI and NDBI to en hance the contrast between vegetation and built-up areas.\n📐 Formula – VIBI \\[\nVIBI = \\frac{NDVI}{NDVI + NDBI}\n\\]",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to Existing Built-up Indices</span>"
     ]
   },
   {
-    "objectID": "02-ndbi.html#brba-2012",
-    "href": "02-ndbi.html#brba-2012",
+    "objectID": "02-bi_collection.html#brba-nbai-2012",
+    "href": "02-bi_collection.html#brba-nbai-2012",
     "title": "3  Introduction to Existing Built-up Indices",
-    "section": "3.7 BRBA (2012)",
-    "text": "3.7 BRBA (2012)",
+    "section": "3.7 BRBA & NBAI (2012)",
+    "text": "3.7 BRBA & NBAI (2012)\nBoth Band Ratio for Built-up Area (BRBA) and Normalized Built-up Area Index (NBAI) were proposed by Waqar et al., 2012. These indices were tested using Landsat TM imagery over Islamabad, the capital of Pakistan.\nI quote a portion of author’s abstract here, as I agree with their point that due to landscape variability, a universal built-up index applicable to all regions is unrealistic.\n\n\n\n\n\n\n📖 Citation\n\n\n\nAs spectral response of land cover features varies from region to region due to climatic & topographic changes so are their spectral curves. Dues to this reason, indices developed for one area can’t be effectively applicable to another area.\n\n\n📐 Formula – BRBA \\[\nBRBA = \\frac{Red}{SWIR} = \\frac{B3}{B5}\n\\]\n📐 Formula – NBAI \\[\nNBAI = \\frac{SWIR2 - SWIR1/Green}{SWIR2 + SWIR1/Green} = \\frac{B7 - B5/B2}{B7 - B5/B2}\n\\]",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to Existing Built-up Indices</span>"
     ]
   },
   {
-    "objectID": "02-ndbi.html#nbai2012",
-    "href": "02-ndbi.html#nbai2012",
+    "objectID": "02-bi_collection.html#bbi-2014",
+    "href": "02-bi_collection.html#bbi-2014",
     "title": "3  Introduction to Existing Built-up Indices",
-    "section": "3.8 NBAI(2012)",
-    "text": "3.8 NBAI(2012)",
+    "section": "3.8 BBI (2014)",
+    "text": "3.8 BBI (2014)\nThe Built-up and Bare-land areas Index (BBI) was proposed by Zhou et al., 2014. It was tested using Landsat-8 OLI imagery over Zhengzhou City, Henan Province, China. It is designed to improve upon the limitations of NDBI by separating built-up and bare soil from vegetation and water more effectively.\nThe method uses two sub-indices derived from Landsat-8 OLI to detect different rooftop types:\n1️⃣ 📐 Formula – NDBI2-3 (identify blue-roofed built-up areas) \\[\nNDBI_{2-3} = \\frac{Blue - Green}{Blue + Green} = \\frac{B2 - B3}{B2 + B3}\n\\]\n2️⃣ 📐 Formula – NDBI4-3 (identify red/grey-roofed built-up areas and bare land) \\[\nNDBI_{4-3} = \\frac{Red - Green}{Red + Green} = \\frac{B4 - B3}{B4 + B3}\n\\]\n📐 Formula – BBI \\[\nBBI = NDBI^b_{2-3} + NDBI^b_{4-3}\n\\]\nWhere NDBIb is the binary version of the NDBI sub-index (1 if value &gt; 0; 0 if ≤ 0).\nTherefore, any pixel with BBI &gt; 0 is classified as built-up or bare land; otherwise, it is non-built-up.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to Existing Built-up Indices</span>"
     ]
   },
   {
-    "objectID": "02-ndbi.html#bbi-2014",
-    "href": "02-ndbi.html#bbi-2014",
+    "objectID": "02-bi_collection.html#baei-2015",
+    "href": "02-bi_collection.html#baei-2015",
     "title": "3  Introduction to Existing Built-up Indices",
-    "section": "3.9 BBI (2014)",
-    "text": "3.9 BBI (2014)",
+    "section": "3.9 BAEI (2015)",
+    "text": "3.9 BAEI (2015)\nThe Built-up Area Extraction Index (BAEI) was proposed by Bouzekri et al., 2015 and tested over Djelfa city, Algeria using Landsat-8 OLI imagery.\n📐 Formula – BAEI \\[\nBAEI = \\frac{(Red + L)}{(Green + SWIR)}\n\\]\n\n\n\n\n\n\nNote\n\n\n\nNote: As the full paper is currently inaccessible for me, the parameter L is assumed to be a soil adjustment factor ranging from 0-1, similar to L used in SAVI to minimize soil brightness influence (will update it when available).",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to Existing Built-up Indices</span>"
     ]
   },
   {
-    "objectID": "02-ndbi.html#baei-2015",
-    "href": "02-ndbi.html#baei-2015",
+    "objectID": "02-bi_collection.html#multibi-2019",
+    "href": "02-bi_collection.html#multibi-2019",
     "title": "3  Introduction to Existing Built-up Indices",
-    "section": "3.10 BAEI (2015)",
-    "text": "3.10 BAEI (2015)",
+    "section": "3.10 MultiBI (2019)",
+    "text": "3.10 MultiBI (2019)\nMultiBI is a term I use for describing the index proposed by Ettehadi Osgouei et al., 2019, as the paper does not name it explicitly.\nMultiBI combined three indices, including Normalized Difference Tillage Index (NDTI), the red-edge-based Normalized Vegetation Index (NDVIre), and the Modified Normalized Difference Water Index (MNDWI), which was tested using Sentinel-2A MSI to map urban areas across Istanbul, Turkey.\n\n🌾 Normalized Difference Tillage Index (NDTI) \\[\nNDTI = \\frac{SWIR1 - SWIR2}{SWIR1 - SWIR2} = \\frac{B11 - B12}{B11 + B12}\n\\]\n🌿 red-edge-based Normalized Vegetation Index (NDVIre) \\[\nNDVIre = \\frac{RedEdge1 - Red}{RedEdge1 + Red} = \\frac{B5 - B4}{B5 + B4}\n\\]\n🌊 Modified Normalized Difference Water Index (MNDWI)\n\n\\[\nMNDWI = \\frac{Green - SWIR1}{Green + SWIR1} = \\frac{B3 - B11}{B3 + B11}\n\\]\n📐 Formula – MultiBI \\[\nMultiBI = NDTI + NDVIre + MNDWI\n\\]",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to Existing Built-up Indices</span>"
     ]
   },
   {
-    "objectID": "02-ndbi.html#multibi2019",
-    "href": "02-ndbi.html#multibi2019",
+    "objectID": "02-bi_collection.html#ibui-2020",
+    "href": "02-bi_collection.html#ibui-2020",
     "title": "3  Introduction to Existing Built-up Indices",
-    "section": "3.11 MultiBI(2019)",
-    "text": "3.11 MultiBI(2019)",
+    "section": "3.11 IBUI (2020)",
+    "text": "3.11 IBUI (2020)\nThe Impervious Built-up Index (IBUI) was developed by Santra et al., 2020. The authors assessed IBUI’s performance by using Resourcesat 1 and 2 LISS-III images over the Kolkata-Howrah urban agglomeration, India.\n\\[\nIBUI = NDBI - SAVI - MNDWI\n\\]",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to Existing Built-up Indices</span>"
     ]
   },
   {
-    "objectID": "02-ndbi.html#ibui-2020",
-    "href": "02-ndbi.html#ibui-2020",
+    "objectID": "02-bi_collection.html#mbi-the-fomula-exist-but-cannot-find-the-correct-source",
+    "href": "02-bi_collection.html#mbi-the-fomula-exist-but-cannot-find-the-correct-source",
     "title": "3  Introduction to Existing Built-up Indices",
-    "section": "3.12 IBUI (2020)",
-    "text": "3.12 IBUI (2020)",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to Existing Built-up Indices</span>"
-    ]
-  },
-  {
-    "objectID": "02-ndbi.html#mbi-the-fomula-exist-but-cannot-find-the-source",
-    "href": "02-ndbi.html#mbi-the-fomula-exist-but-cannot-find-the-source",
-    "title": "3  Introduction to Existing Built-up Indices",
-    "section": "3.13 MBI (the fomula exist but cannot find the source)",
-    "text": "3.13 MBI (the fomula exist but cannot find the source)",
+    "section": "3.12 MBI (the fomula exist but cannot find the correct source)",
+    "text": "3.12 MBI (the fomula exist but cannot find the correct source)\nMBI has been cited by Valdiviezo-N et al.,, 2017, Santra et al., 2020, and Kebede et al., 2022, but the original source is unclear, and both papers cite it incorrectly:\n📐 Formula – MBI \\[\nMBI = \\frac{SWIR2 * R - NIR^2}{Red + NIR + SWIR2}\n\\]",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction to Existing Built-up Indices</span>"
     ]
@@ -197,6 +177,16 @@
     "text": "4.3 NDBaI (New Built-up Index)\n\nImproved NDBI formula with better discrimination of bare soil.\n\n👉 These indices set the stage for future innovations – including VBI.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>UI, IBI, and NDBaI – The Evolution</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Bouzekri, Sara, Abdel Aziz Lasbet, and Ammar Lachehab. “A New Spectral Index for Extraction of Built-Up Area Using Landsat-8 Data.” Journal of the Indian Society of Remote Sensing 43, no. 4 (2015): 867–73. https://doi.org/10.1007/s12524-015-0460-6.\nC. Jieli, L. Manchun, L. Yongxue, S. Chenglei and H. Wei, “Extract residential areas automatically by New Built-up Index,” 2010 18th International Conference on Geoinformatics, Beijing, China, 2010, pp. 1-5, doi:10.1109/GEOINFORMATICS.2010.5567823.\nEttehadi Osgouei, Paria, Sinasi Kaya, Elif Sertel, and Ugur Alganci. “Separating Built-Up Areas from Bare Land in Mediterranean Cities Using Sentinel-2A Imagery.” Remote Sensing 11, no. 3 (2019): 345. https://doi.org/10.3390/rs11030345.\nHe, Chunyang, Peijun Shi, Dingyong Xie, and Yuanyuan Zhao. 2010. “Improving the Normalized Difference Built-up Index to Map Urban Built-up Areas Using a Semiautomatic Segmentation Approach.” Remote Sensing Letters 1 (4): 213–21. https://doi.org/10.1080/01431161.2010.481681.\nKebede, Tsion Ayalew, Binyam Tesfaw Hailu, and Karuturi Venkata Suryabhagavan. “Evaluation of Spectral Built-up Indices for Impervious Surface Extraction Using Sentinel-2A MSI Imageries: A Case of Addis Ababa City, Ethiopia.” Environmental Challenges 8 (August 2022): 100568. https://doi.org/10.1016/j.envc.2022.100568.\nPontius Jr, Robert Gilmore, and Kangping Si. 2014. “The Total Operating Characteristic to Measure Diagnostic Ability for Multiple Thresholds.” International Journal of Geographical Information Science 28 (3): 570–83. https://doi.org/10.1080/13658816.2013.862623.\nSantra, Abhisek, Shreyashi Santra Mitra, Suman Sinha, and Shidharth Routh. “Performance Testing of Selected Spectral Indices in Automated Extraction of Impervious Built-up Surface Features Using Resourcesat LISS-III Image.” Arabian Journal of Geosciences 13, no. 22 (2020): 1229. https://doi.org/10.1007/s12517-020-06183-z.\nStathakis, Demetris, Konstantinos Perakis, and Igor Savin. “Efficient Segmentation of Urban Areas by the VIBI.” International Journal of Remote Sensing 33, no. 20 (2012): 6361–77. https://doi.org/10.1080/01431161.2012.687842.\nValdiviezo-N, Juan C., Alejandro Téllez-Quiñones, Adan Salazar-Garibay, and Alejandra A. López-Caloca. “Built-up Index Methods and Their Applications for Urban Extraction from Sentinel 2A Satellite Data: Discussion.” Journal of the Optical Society of America A 35, no. 1 (2018): 35. https://doi.org/10.1364/JOSAA.35.000035.\nWaqar, Mirza Muhammad, Johum Fatimah Mirza, Rafia Mumtaz, and Ejaz Hussain. “Development of new indices for extraction of built-up area & bare soil from landsat data.” Open Access Sci. Rep 1, no. 1 (2012): 4.\nXu, H. 2008. “A New Index for Delineating Built‐up Land Features in Satellite Imagery.” International Journal of Remote - Sensing 29 (14): 4269–76. https://doi.org/10.1080/01431160802039957.\nZha, Y., J. Gao, and S. Ni. 2003. “Use of Normalized Difference Built-up Index in Automatically Mapping Urban Areas from TM Imagery.” International Journal of Remote Sensing 24 (3): 583–94. https://doi.org/10.1080/01431160304987.\nZhou, Yi, Guang Yang, Shixin Wang, Litao Wang, Futao Wang, and Xiongfei Liu. “A New Index for Mapping Built-up and Bare Land Areas from Landsat-8 OLI Data.” Remote Sensing Letters 5, no. 10 (2014): 862–71. https://doi.org/10.1080/2150704X.2014.973996.",
+    "crumbs": [
+      "References"
     ]
   }
 ]
